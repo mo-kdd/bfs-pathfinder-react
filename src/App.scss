@@ -1,0 +1,43 @@
+$cell-size: 3rem;
+$grid-rows: 12;
+$grid-cols: 20;
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat($grid-cols, $cell-size); /* 20 columns, each 20px wide */
+    grid-template-rows: repeat($grid-rows, $cell-size); /* 20 rows, each 20px tall */
+}
+
+.reset-btn,
+.solve-btn {
+    margin-top: 2px;
+    margin-right: 2px;
+}
+
+.cell {
+    border: 1px solid #ccc;
+    width: $cell-size;
+    height: $cell-size;
+    background-color: white;
+    transition: background-color 0.3s ease;
+}
+
+.cell.wall {
+    background-color: rgb(0, 0, 101);
+}
+
+.cell.end {
+    background-color: rgb(255, 66, 66) !important;
+}
+
+.cell.start {
+    background-color: rgb(108, 255, 108) !important;
+}
+
+.cell.path {
+    background-color: rgb(255, 211, 92) !important;
+}
+
+.cell.visited {
+    background-color: rgb(219, 237, 244);
+}
